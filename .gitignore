@@ -1,0 +1,61 @@
+# =============================================================================
+# What's hidden:
+#   - LaTeX source + build artifacts (kept local in */admin/)
+#   - Makefile and build scripts (kept local)
+#   - Toolchain binaries (install locally under repos/)
+#   - Private scratch (supplementary/, **/admin/, .claude/)
+# What's tracked:
+#   - PDFs (the products)
+#   - examples/ source (Verilog, schematics, YAML)
+#   - images in each section (used by the PDFs)
+#   - README files explaining each top-level directory
+# =============================================================================
+
+# Private / scratch
+supplementary/
+.claude/
+**/admin/
+
+# TA-only materials (kept local, not published)
+ta/
+
+# LaTeX source — kept local inside admin/, never in git
+*.tex
+*.aux
+*.log
+*.out
+*.toc
+*.nav
+*.snm
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# Build tooling — local only
+Makefile
+*.py
+__pycache__/
+
+# Python virtual envs
+venv/
+.venv/
+
+# Toolchain binaries (install locally under repos/)
+repos/oss-cad-suite/
+repos/oss-cad-suite-*.tgz
+repos/iic-osic-tools/
+
+# Simulation artifacts
+*.vcd
+sim
+examples/sim/
+examples/*.dot
+examples/synth_report.txt
+
+# PowerPoint exports
+*.pptx
+
+# Editor
+.~lock.*
+
+
